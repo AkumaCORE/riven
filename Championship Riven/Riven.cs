@@ -713,48 +713,7 @@ namespace Championship_Riven
         
         private static void LastHit()
         {
-        {
-                var tawah = EntityManager.Turrets.Allies.FirstOrDefault
-                (t => !t.IsDead && t.IsInRange(Player.Instance, 800));
-                var Minions = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy, Player.Instance.Position, 450);
-                foreach (var Minion in Minions)
-                {    
-                    if (tawah != null && ObjectManager.Player.Position.Distance(tawah.ServerPosition) > 500 && Minion != null && Prediction.Health.GetPrediction(Minion, 50) > Player.Instance.TotalAttackDamage && Prediction.Health.GetPrediction(Minion, 50) - Player.Instance.TotalAttackDamage - SpellQDamage(Minion, Minion.Health)  <= 0 )
-                     
-                    {
-                        
-                        if( Minion.IsValidTarget(Player.Instance.GetAutoAttackRange(Minion)) && Orbwalker.CanAutoAttack)
-                        {
-                            if(Q.IsReady() && CountQ <= 2)
-                            {
-                                
-                                {
-                                    
-                                    Player.IssueOrder(GameObjectOrder.AttackUnit, Minion);
-                                    Core.DelayAction( () => Player.CastSpell(SpellSlot.Q), 200);
-                                    Chat.Print("Last Hitting With AA-Q");
-                                    
-                                }
-                            }
-                        
-                            else if(W.IsReady())
-                            {
-                                
-                                {
-                                    
-                                    Player.IssueOrder(GameObjectOrder.AttackUnit, Minion);
-                                    Core.DelayAction( () => Player.CastSpell(SpellSlot.W), 300);
-                                    Chat.Print("Last Hitting With AA-W");
-                                    
-                                } 
-                            }
 
-                            
-                        }
-
-                    }
-                }
-        }
         
         {
             var mawah = EntityManager.Heroes.Enemies.FirstOrDefault

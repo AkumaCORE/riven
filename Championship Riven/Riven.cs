@@ -683,8 +683,8 @@ namespace Championship_Riven
                         Player.CastSpell(SpellSlot.Q, Target.Position);
                         if (Target.IsValidTarget(W.Range))
                         {
-                           Core.DelayAction( () => Player.CastSpell(SpellSlot.E, Game.CursorPos),1200);
-                           Core.DelayAction( () => Player.CastSpell(SpellSlot.W), 1240);
+                           Core.DelayAction( () => Player.CastSpell(SpellSlot.E, Game.CursorPos),1300);
+                           Core.DelayAction( () => Player.CastSpell(SpellSlot.W), 1340);
                         }
 
                     }

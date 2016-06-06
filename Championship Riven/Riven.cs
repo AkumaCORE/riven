@@ -106,6 +106,16 @@ namespace Championship_Riven
                                     
                                     Chat.Print("Last Hitting With AA-Q");
 				 }
+				 else if(W.IsReady() && Prediction.Health.GetPrediction(Minion, 940 * (int)(Minion.Distance(sender.Position)/750)) > Player.Instance.TotalAttackDamage &&  Prediction.Health.GetPrediction(Minion, 940 * (int)(Minion.Distance(sender.Position)/750)) + (int)(AMinions.Count * -2) <= sender.TotalAttackDamage * 1.25)
+				 {   
+				    
+				    Orbwalker.DisableMovement = true;
+				    Core.DelayAction( () => Player.IssueOrder(GameObjectOrder.AttackUnit, args.Target),0);
+                                    Core.DelayAction( () => W.Cast(Minion.ServerPosition),291);
+                                    Core.DelayAction( () => Orbwalker.DisableMovement = false,300);
+                                    
+                                    Chat.Print("Last Hitting With AA-w");
+				 }
                                     
  
 

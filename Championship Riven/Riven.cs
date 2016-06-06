@@ -100,9 +100,8 @@ namespace Championship_Riven
 				 {   
 				    Chat.Print("LH");
 				    Orbwalker.DisableMovement = true;
-				    Core.DelayAction( () => Q.Cast(Minion.ServerPosition),0);
-                                    Core.DelayAction( () => Player.IssueOrder(GameObjectOrder.AttackUnit, args.Target),0);
-                                    
+				    Core.DelayAction( () => Player.IssueOrder(GameObjectOrder.AttackUnit, args.Target),0);
+                                    Core.DelayAction( () => Q.Cast(Minion.ServerPosition),50);
                                     Core.DelayAction( () => Orbwalker.DisableMovement = false,300);
                                     
                                     Chat.Print("Last Hitting With AA-Q");

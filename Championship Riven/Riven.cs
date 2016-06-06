@@ -86,7 +86,7 @@ namespace Championship_Riven
                 Chat.Print("sender detected");
                     
                    
-                    var Minions = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy, Player.Instance.Position, 1500);
+                    var Minions = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy, Player.Instance.Position, 150);
                     foreach (var Minion in Minions)
                     
                     if (Minion != null && args.Target == Minion)

@@ -98,7 +98,7 @@ namespace Championship_Riven
  
 				if(Q.IsReady() && Prediction.Health.GetPrediction(Minion, 940 * (int)(Minion.Distance(sender.Position)/750)) > Player.Instance.TotalAttackDamage &&  Prediction.Health.GetPrediction(Minion, 940 * (int)(Minion.Distance(sender.Position)/750)) + (int)(AMinions.Count * -5) <= sender.TotalAttackDamage * 1.25)
 				 {   
-				    Chat.Print("LH");
+				    
 				    Orbwalker.DisableMovement = true;
 				    Core.DelayAction( () => Player.IssueOrder(GameObjectOrder.AttackUnit, args.Target),0);
                                     Core.DelayAction( () => Q.Cast(Minion.ServerPosition),200);
